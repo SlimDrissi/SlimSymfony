@@ -19,6 +19,19 @@ class EtapeCircuitRepository extends ServiceEntityRepository
         parent::__construct($registry, EtapeCircuit::class);
     }
 
+    /**
+    * @return EtapeCircuit[]
+    */
+    public function findOrdre():array {
+
+        return $this->createQueryBuilder('e')
+        ->where('e.ordre.etape=1')
+        ->orderBy('e.ville_etape_circuit','DESC')
+        ->getQuery()
+        ->getResult();
+
+    }
+
     // /**
     //  * @return EtapeCircuit[] Returns an array of EtapeCircuit objects
     //  */

@@ -18,6 +18,7 @@ class DestinationRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Destination::class);
     }
+    
 
     // /**
     //  * @return Destination[] Returns an array of Destination objects

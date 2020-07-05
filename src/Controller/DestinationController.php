@@ -15,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class DestinationController extends AbstractController
 {
+
     /**
      * @Route("/", name="destination_index", methods={"GET"})
      */
@@ -25,6 +26,7 @@ class DestinationController extends AbstractController
             'destinations' => $destinationRepository->findAll(),
         ]);
     }
+
 
     /**
      * @Route("/new", name="destination_new", methods={"GET","POST"})
@@ -92,4 +94,5 @@ class DestinationController extends AbstractController
 
         return $this->redirectToRoute('destination_index');
     }
+    
 }

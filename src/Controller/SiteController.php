@@ -29,5 +29,11 @@ class SiteController extends AbstractController
     public function tarif(){
         return $this->render('site/tarifs.html.twig');
     }
+    /**
+     * @Route("/find",name="find")
+     */
+    public function find(){
+        return $this->render('site/find.html.twig');
+    }
     
 }
